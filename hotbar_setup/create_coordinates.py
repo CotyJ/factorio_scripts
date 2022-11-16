@@ -20,15 +20,13 @@ def create_coordinates(row, col):
 
   for row in row_list:
     for col in col_list:
-      newstr1 = str(row)
-      # newstr2 = str(col)
       newstr = str(row) + "-" + str(col)
 
       # here
       starting_position = [776, 1048]
-      print("col ", int(newstr1))
+      print("col ", int(str(row)))
       # if first half (left 5)
-      if int(newstr1) <= 5:
+      if int(str(row)) <= 5:
         print("less than equals 5")
         dic[newstr] = [starting_position[0] + (40 * (row - 1)), starting_position[1] - (40 * (col - 1))]
       else:

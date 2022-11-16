@@ -1,3 +1,7 @@
+# creates a coordinates dictionary with the below schema
+#  { "col-row": [0, 0] }
+# ex { "1-1":   [0, 0 }
+
 def create_coordinates(row, col):
   rows_start = 1
   columns_start = 1

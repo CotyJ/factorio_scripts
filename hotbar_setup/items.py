@@ -1,7 +1,7 @@
 items = {
-  # "name":             ["Name",                [tab_location],[row, col] ]
-    "woodChest":        ["Wood Chest",          ["logistics"], [0, 0]],
-    "coal":             ["Coal",                ["intermediates"], [0, 1]],
+  # "name":             ["Name",                tab_location,       row, col]
+    "woodChest":        ["Wood Chest",          "logistics",        0, 0],
+    "coal":             ["Coal",                "intermediates",    0, 1],
     "ironOre":          ["Iron Ore",            [0, 0], [0, 0]],
     "copperOre":        ["Copper Ore",          [0, 0], [0, 0]],
     "stone":            ["Stone",               [0, 0], [0, 0]],
@@ -16,8 +16,8 @@ items = {
     "splitter":         ["Splitter",            [0, 0], [0, 0]],
     "greenCircuit":     ["Green Circuit",       [0, 0], [0, 0]],
 
-    "burnerDrill":      ["Burner Mining Drill",     ["production"], [0, 0]],
-    "electricDrill":    ["Electric Mining Drill",   ["production"], [0, 0]],
+    "burnerDrill":      ["Burner Mining Drill",     "production", 0, 0],
+    "electricDrill":    ["Electric Mining Drill",   "production", 0, 0],
     "boiler":           ["Boiler", 0, 0],
     "oilRefinery":      ["Oil Refinery", 0, 0],
 
@@ -46,5 +46,6 @@ items = {
     "fastInserter":     ["Fast Inserter", 0, 0],
     "fastSplitter":     ["Fast Splitter", 0, 0],
 
-    "wall":             ["Wall",                    ["combat"], [0, 7]]
+    "wall":             ["Wall",                    "combat", 0, 7],
+    "repairPack":       ["Repair Pack",             "production", 0, 0]
 }

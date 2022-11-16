@@ -1,6 +1,7 @@
 # creates a coordinates dictionary with the below schema
-#  { "col-row": [0, 0] }
-# ex { "1-1":   [0, 0 }
+#    { "col-row": [X, Y]        col, row }
+# ex { "1-1":     [776, 1048] , 1,   1   }
+# putting a list inside of a list for the property converted them to a string
 
 def create_coordinates(row, col):
   rows_start = 1
@@ -28,10 +29,10 @@ def create_coordinates(row, col):
       # if first half (left 5)
       if int(str(row)) <= 5:
         print("less than equals 5")
-        dic[newstr] = [starting_position[0] + (40 * (row - 1)), starting_position[1] - (40 * (col - 1))]
+        dic[newstr] = [starting_position[0] + (40 * (row - 1)), starting_position[1] - (40 * (col - 1)), row, col]
       else:
         print("greater than 5")
-        dic[newstr] = [starting_position[0] + (40 * (row - 1)) + 4, starting_position[1] - (40 * (col - 1))]
+        dic[newstr] = [starting_position[0] + (40 * (row - 1)) + 4, starting_position[1] - (40 * (col - 1)), row, col]
 
 
       # if second half (right 5)

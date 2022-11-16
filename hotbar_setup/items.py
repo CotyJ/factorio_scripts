@@ -1,18 +1,19 @@
 items = {
-    "coal":             ["Coal", 0, 0],
-    "ironOre":          ["Iron Ore", 0, 0],
-    "copperOre":        ["Copper Ore", 0, 0],
-    "stone":            ["Stone", 0, 0],
+  # "name":             ["Name",                [tabX, tabY], [menuX, menuY]
+    "coal":             ["Coal",                [0, 0], [0, 0]],
+    "ironOre":          ["Iron Ore",            [0, 0], [0, 0]],
+    "copperOre":        ["Copper Ore",          [0, 0], [0, 0]],
+    "stone":            ["Stone",               [0, 0], [0, 0]],
 
-    "steelPlate":       ["Steel Plate", 0, 0],
-    "ironPlate":        ["Iron Plate", 0, 0],
-    "copperPlate":      ["Copper Plate", 0, 0],
-    "stoneBrick":       ["Stone Brick", 0, 0],
+    "steelPlate":       ["Steel Plate",         [0, 0], [0, 0]],
+    "ironPlate":        ["Iron Plate",          [0, 0], [0, 0]],
+    "copperPlate":      ["Copper Plate",        [0, 0], [0, 0]],
+    "stoneBrick":       ["Stone Brick",         [0, 0], [0, 0]],
 
-    "transportBelt":    ["Transport Belt", 0, 0],
-    "undergroundBelt":  ["Underground Belt", 0, 0],
-    "splitter":         ["Splitter", 0, 0],
-    "greenCircuit":     ["Green Circuit", 0, 0],
+    "transportBelt":    ["Transport Belt",      [0, 0], [0, 0]],
+    "undergroundBelt":  ["Underground Belt",    [0, 0], [0, 0]],
+    "splitter":         ["Splitter",            [0, 0], [0, 0]],
+    "greenCircuit":     ["Green Circuit",       [0, 0], [0, 0]],
 
     "burnerDrill":      ["Burner Mining Drill", 0, 0],
     "electricDrill":    ["Electric Mining Drill"],

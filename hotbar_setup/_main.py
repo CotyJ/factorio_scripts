@@ -22,7 +22,7 @@ delay = .05
 
 # Import Coordinates file
 hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv')
-print(hotbar_coordinates)
+# print(hotbar_coordinates)
 
 # tab locations from 4-1
 logistics_start = [824, 600]
@@ -30,7 +30,7 @@ production_start = [932, 600]
 intermediates_start = [1040, 600]
 combat_start = [1138, 600]
 
-print("PRESET \n", preset)
+# print("PRESET \n", preset)
 
 # ++++++++++ MAIN LOOP ++++++++++
 for key in hotbar_coordinates:
@@ -41,10 +41,10 @@ for key in hotbar_coordinates:
   keyboard.press_and_release('escape')
   """
   # Move mouse to hotbar location and click---- DONE
-  print(hotbar_coordinates[key][0], hotbar_coordinates[key][1])
+  print("Hotbar Coordinates:", hotbar_coordinates[key][0], hotbar_coordinates[key][1])
   mouse.move(hotbar_coordinates[key][0], hotbar_coordinates[key][1])
   time.sleep(delay)
-  print(type(key))
+  print("Hotbar Position (key):", key)
   print("Preset Key:", preset[key])
   print("Key:", key + '\n')
 

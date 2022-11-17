@@ -1,38 +1,41 @@
+# Packages
 import mouse
 import time
-import keyboard
 import pandas as pd
 
+# Data
 from preset_1 import preset1 as preset
 from items import items
-from create_coordinates import create_coordinates
+# from create_coordinates import create_coordinates
 
 
-# Item boxes are 40x40 including spacing
+# Variables _________________________________________
+  # Item boxes are 40x40 including spacing
 item_box = 40
 
-# Starting position on my laptop screen
+  # Starting position on my laptop screen
 starting_position = [776,  1048]
 
-# Filter starting pos
+  # Filter starting pos
 filter_start_pos =  [804, 670]
 
-# timing delay
+  # timing delay
 delay = .05
 
-# Import Coordinates file
-hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv')
-# print(hotbar_coordinates)
-
-# tab locations from 4-1
+  # tab locations starting at 4-1
 logistics_start = [824, 600]
 production_start = [932, 600]
 intermediates_start = [1040, 600]
 combat_start = [1138, 600]
 
-# print("PRESET \n", preset)
+# END Variables _____________________________________
 
-# ++++++++++ MAIN LOOP ++++++++++
+
+# Import Coordinates file
+hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv') # Imports as a Dataframe
+
+
+# ++++++++++++++++++++ MAIN LOOP ++++++++++++++++++++
 for key in hotbar_coordinates:
   # Reset buttons here if needed
   """
@@ -41,12 +44,14 @@ for key in hotbar_coordinates:
   keyboard.press_and_release('escape')
   """
   # Move mouse to hotbar location and click---- DONE
-  print("Hotbar Coordinates:", hotbar_coordinates[key][0], hotbar_coordinates[key][1])
+
+  # Move mouse to position on hotbar, then click
   mouse.move(hotbar_coordinates[key][0], hotbar_coordinates[key][1])
+  # mouse.click(button='left')
   time.sleep(delay)
-  print("Hotbar Position (key):", key)
-  print("Preset Key:", preset[key])
-  print("Key:", key + '\n')
+
+  # Move mouse to appropriate tab and click
+  mouse.move()
 
 # WIP
 """
@@ -81,7 +86,7 @@ for key in hotbar_coordinates:
   # print(key, *hotbar_coordinates[key])
   # time.sleep(delay)
 """
-#______________________________________________________________
+#_____________________________________________________
 
 
 # Move mouse to bottom left hotbar
@@ -119,7 +124,7 @@ time.sleep(delay)
 # item_loc = [start_pos[0] + (small_box_dims * item[0]),  start_pos[1] + (small_box_dims * item[1])]
 
 
-# Wall example ****************************************************
+# Wall example *****************************************
 """
 wall = items["wall"]
 # print("Wall:", wall, "\n")
@@ -151,7 +156,7 @@ print("Row, Col:", wall[2])
 print("Combat tab starting position: ", combat_start)
 """
 
-# END Wall example ****************************************************
+# END Wall example ************************************
 
 
 
@@ -185,11 +190,10 @@ time.sleep(delay)
 """
 
 
-
 print("Done")
 
 
-# Export Function_________________________________________________________
+# Export Function______________________________________
 """
 # build the dictionary for coordinates.py
 rows = 10

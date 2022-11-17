@@ -34,7 +34,7 @@ preset1 = {
   "7-3":  "mediumPole",
   "7-4":  "smallPole",
 
-  "8-1":  "trainstop",
+  "8-1":  "trainStop",
   "8-2":  "assembler2",
   "8-3":  "fastBelt",
   "8-4":  "inserter",

@@ -21,7 +21,7 @@ items = {
 
     "smallPole":        ["Small Electric Pole",     "logistics",     3, 0],
     "mediumPole":       ["Medium Electric Pole",    "logistics",     3, 1],
-    "largePole":        ["Large Electric Pole",     "logistics",     3, 2],
+    "bigPole":          ["Big Electric Pole",       "logistics",     3, 2],
     "substation":       ["Substation",              "logistics",     3, 3],
 
     "pipe":             ["Pipe",                    "logistics",     3, 4],
@@ -31,6 +31,9 @@ items = {
     "trainStop":        ["Train Stop",              "logistics",     4, 1],
     "railSignal":       ["Rail Signal",             "logistics",     4, 2],
     "railChainSignal":  ["Rail Chain Signal",       "logistics",     4, 3],
+    "cargoWagon":       ["Cargo Wagon",             "logistics",     4, 4],
+    "locomotive":       ["Locomotive",              "logistics",     4, 5],
+
 
     "car":              ["Car",                     "logistics",     5, 0],
 
@@ -83,6 +86,7 @@ items = {
     "wall":             ["Wall",                    "combat",        7, 0],
     "gunTurret":        ["Gun Turret",              "combat",        0, 2],
     "laserTurret":      ["Laser Turret",            "combat",        0, 2],
-    "gunTurret":        ["Flamethrower",            "combat",        0, 2]
+    "flamethrowerTurret": ["Flamethrower",            "combat",        0, 2],
+    "landMine":         ["Landmine",                "combat",        0, 6]
 
 }

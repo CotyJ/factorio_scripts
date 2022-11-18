@@ -37,7 +37,7 @@ items = {
 
     "car":              ["Car",                     "logistics",     0, 5],
 
-    "constructionBot":  ["Construction Robot",      "logistics",     7, 6],
+    "constructionBot":  ["Construction Robot",      "logistics",     1, 6],
     "providerChest":    ["Passive Provider Chest",  "logistics",     3, 6],
     "roboport":         ["Roboport",                "logistics",     7, 6],
 

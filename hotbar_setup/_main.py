@@ -15,7 +15,7 @@ from items import items
 item_box = 40                     # Item boxes are 40x40 including spacing
 starting_position = [776,  1048]  # Starting position on my laptop screen
 filter_start_pos =  [804, 670]    # Filter starting pos
-delay = .03                        # timing delay
+delay = .02                       # timing delay
 
 # mouse.move(*filter_start_pos)
 
@@ -31,6 +31,14 @@ hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv')  # Imports as a Dataf
 
 print('\n')
 
+# """
+time.sleep(delay)           # --------------DELAY
+mouse.move(960, 330)        # move to Resume
+time.sleep(delay)           # --------------DELAY
+mouse.click(button='left')
+time.sleep(delay)           # --------------DELAY
+# """
+
 # ++++++++++++++++++++++++++++++ MAIN LOOP +++++++++++++++++++++++++++++++++++++++
 for key in hotbar_coordinates:
 
@@ -41,9 +49,9 @@ for key in hotbar_coordinates:
   tab =            items[item][1]                                       # Item tab name
   itemX_offset =   int(items[item][2] * 40)                             # Item Filter X Offset
   itemY_offset =   int(items[item][3] * 40)                             # Item Filter Y Offset
-  hotbar_offsetX = (int(key.split('-')[0]) - 1) * 40                   # Hotbar offset pixels X
-  hotbar_offsetY = (int(key.split('-')[1]) - 1) * 40                   # Hotbar offset pixels Y
-  item_locationX = itemX_offset + filter_start_pos[0] - hotbar_offsetX  # Item X screen position
+  hotbar_offsetX = (int(key.split('-')[0]) - 1) * 40                    # Hotbar offset pixels X
+  hotbar_offsetY = (int(key.split('-')[1]) - 1) * 40                    # Hotbar offset pixels Y
+  item_locationX = itemX_offset + filter_start_pos[0] + hotbar_offsetX  # Item X screen position
   item_locationY = itemY_offset + filter_start_pos[1] - hotbar_offsetY  # Item Y screen position
 
   # """
@@ -55,10 +63,11 @@ for key in hotbar_coordinates:
   print("Offset from hotbar position Y:", hotbar_offsetY)
   print("Item X offset:", itemX_offset)
   print("Item Y offset:", itemY_offset)
+  print("Item Coordinates:", item_locationX, item_locationY)
   # """
 
   # Move mouse to position on hotbar--------------------------------------------- DONE
-  time.sleep(delay)                              # --------------FIRST DELAY
+  # time.sleep(delay)                              # --------------FIRST DELAY
 
   mouse.move(hbX, hbY)                           # --------------ACTION
   time.sleep(delay)                              # --------------DELAY
@@ -74,11 +83,11 @@ for key in hotbar_coordinates:
   """
 
   # Move mouse to appropriate tab and click-------------------------------------
-  # Move mouse to item and click
+  # Move mouse to tab coordinate, offset by hotbar_offsetX
 
   # time.sleep(delay)
 
-  # Move mouse to item and click-----------------------------------------------
+  # Move mouse to item and click----------------------------------------------- DONE
   # print("Move Mouse to Item:", item_locationX, item_locationY)
   mouse.move(item_locationX, item_locationY)     # --------------ACTION
   time.sleep(delay)                              # --------------DELAY
@@ -93,9 +102,10 @@ for key in hotbar_coordinates:
   """
 
   print('\n')
-  if item == 'repairPack':
-    break
+  # if item == 'locomotive':
+  #   break
 
 print("Done")
 
+# repair pack should be at
 # 800 550

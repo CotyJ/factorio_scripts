@@ -3,7 +3,6 @@ import time
 import mouse
 from items import items
 
-
 def map_mouse():
   time.sleep(.5)
   #
@@ -55,5 +54,7 @@ def map_mouse():
   print(pos)
   time.sleep(.5)
 
-# time.sleep(1)
-map_mouse()
+time.sleep(1)
+# map_mouse()
+
+mouse.move (1218, 480)

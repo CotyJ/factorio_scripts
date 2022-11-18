@@ -1,5 +1,5 @@
 # Packages
-import keyboard
+# import keyboard
 import mouse
 import time
 import pandas as pd
@@ -15,13 +15,13 @@ from items import items
 item_box = 40                     # Item boxes are 40x40 including spacing
 starting_position = [776,  1048]  # Starting position on my laptop screen
 filter_start_pos =  [804, 670]    # Filter starting pos
-delay = .02                       # timing delay
+delay = .005                       # timing delay
 
 # mouse.move(*filter_start_pos)
 
 tabs = {  # tab locations starting at 4-1
-  "logistics":     [824, 600],
-  "production":    [932, 600],
+  "logistics":     [824,  600],
+  "production":    [932,  600],
   "intermediates": [1040, 600],
   "combat":        [1138, 600],
 }
@@ -29,7 +29,6 @@ tabs = {  # tab locations starting at 4-1
 # Import Coordinates file
 hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv')  # Imports as a Dataframe
 
-print('\n')
 
 # """
 time.sleep(delay)           # --------------DELAY
@@ -53,21 +52,24 @@ for key in hotbar_coordinates:
   hotbar_offsetY = (int(key.split('-')[1]) - 1) * 40                    # Hotbar offset pixels Y
   item_locationX = itemX_offset + filter_start_pos[0] + hotbar_offsetX  # Item X screen position
   item_locationY = itemY_offset + filter_start_pos[1] - hotbar_offsetY  # Item Y screen position
+  tab_position = [tabs[tab][0], tabs[tab][1]]                           #
+  tab_offsetX = tabs[tab][0] + hotbar_offsetX                           #
+  tab_offsetY = tabs[tab][1] - hotbar_offsetY                           #
 
-  # """
-  print("item:  ",  item)
-  print("Item:  ",  item_fancy)
-  print("Tab:   ",  tab)
-  print("ItemX: ",  items[item][2], "ItemY:", items[item][3])
-  print("Offset from hotbar position X:", hotbar_offsetX)
-  print("Offset from hotbar position Y:", hotbar_offsetY)
-  print("Item X offset:", itemX_offset)
-  print("Item Y offset:", itemY_offset)
-  print("Item Coordinates:", item_locationX, item_locationY)
-  # """
+  def print_details():
+    print("item:  ", item)
+    print("Item:  ", item_fancy)
+    print("Tab:   ", tab)
+    print("ItemX: ", items[item][2], "ItemY:", items[item][3])
+    print("Offset from hotbar position X:", hotbar_offsetX)
+    print("Offset from hotbar position Y:", hotbar_offsetY)
+    print("Item X offset:", itemX_offset)
+    print("Item Y offset:", itemY_offset)
+    print("Item Coordinates:", item_locationX, item_locationY)
+  # print_details()
 
   # Move mouse to position on hotbar--------------------------------------------- DONE
-  # time.sleep(delay)                              # --------------FIRST DELAY
+  # time.sleep(delay)                            # --------------FIRST DELAY
 
   mouse.move(hbX, hbY)                           # --------------ACTION
   time.sleep(delay)                              # --------------DELAY
@@ -82,13 +84,18 @@ for key in hotbar_coordinates:
   time.sleep(delay*2)
   """
 
-  # Move mouse to appropriate tab and click-------------------------------------
+  # Move mouse to appropriate tab and click------------------------------------ NOT DONE
   # Move mouse to tab coordinate, offset by hotbar_offsetX
 
-  # time.sleep(delay)
+  time.sleep(delay)                              # --------------DELAY
+  mouse.move(tab_offsetX, tab_offsetY)
+  time.sleep(delay)                              # --------------DELAY
+  mouse.click(button='left')
+  time.sleep(delay)                              # --------------DELAY
+
+  # logistics tab at 10-4 should be at like 1184, 486
 
   # Move mouse to item and click----------------------------------------------- DONE
-  # print("Move Mouse to Item:", item_locationX, item_locationY)
   mouse.move(item_locationX, item_locationY)     # --------------ACTION
   time.sleep(delay)                              # --------------DELAY
   mouse.click(button='left')                     # --------------ACTION
@@ -102,10 +109,11 @@ for key in hotbar_coordinates:
   """
 
   print('\n')
-  # if item == 'locomotive':
+  # if item == 'gunTurret':
   #   break
+    # time.sleep(2)
+
+# ++++++++++++++++++++++++++++++ MAIN LOOP END +++++++++++++++++++++++++++++++++++++
 
 print("Done")
-
-# repair pack should be at
-# 800 550
+time.sleep(1)

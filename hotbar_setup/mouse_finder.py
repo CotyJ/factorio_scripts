@@ -35,5 +35,25 @@ def map_mouse():
   print(pos)
   time.sleep(.5)
 
-time.sleep(1)
-# map_mouse()
+  pos = mouse.get_position()
+  print(pos)
+  time.sleep(.5)
+
+  pos = mouse.get_position()
+  print(pos)
+  time.sleep(.5)
+
+  pos = mouse.get_position()
+  print(pos)
+  time.sleep(.5)
+
+  pos = mouse.get_position()
+  print(pos)
+  time.sleep(.5)
+
+  pos = mouse.get_position()
+  print(pos)
+  time.sleep(.5)
+
+# time.sleep(1)
+map_mouse()

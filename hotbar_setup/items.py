@@ -6,87 +6,86 @@ items = {
     "steelChest":       ["Steel Chest",             "logistics",     0, 0],
     "tank":             ["Storage Tank",            "logistics",     0, 3],
 
-    "transportBelt":    ["Transport Belt",          "logistics",     1, 0],
+    "transportBelt":    ["Transport Belt",          "logistics",     0, 1],
     "fastBelt":         ["Fast Transport Belt",     "logistics",     1, 1],
-    "undergroundBelt":  ["Underground Belt",        "logistics",     1, 3],
-    "fastUnderground":  ["Fast Underground Belt",   "logistics",     1, 4],
-    "splitter":         ["Splitter",                "logistics",     1, 6],
-    "fastSplitter":     ["Fast Splitter",           "logistics",     1, 7],
+    "undergroundBelt":  ["Underground Belt",        "logistics",     3, 1],
+    "fastUnderground":  ["Fast Underground Belt",   "logistics",     4, 1],
+    "splitter":         ["Splitter",                "logistics",     6, 1],
+    "fastSplitter":     ["Fast Splitter",           "logistics",     7, 1],
 
 
-    "inserter":         ["Inserter",                "logistics",     2, 0],
-    "longInserter":     ["Long-Handed Inserter",    "logistics",     2, 0],
-    "fastInserter":     ["Fast Inserter",           "logistics",     2, 0],
+    "inserter":         ["Inserter",                "logistics",     1, 2],
+    "longInserter":     ["Long-Handed Inserter",    "logistics",     2, 2],
+    "fastInserter":     ["Fast Inserter",           "logistics",     3, 2],
 
 
-    "smallPole":        ["Small Electric Pole",     "logistics",     3, 0],
-    "mediumPole":       ["Medium Electric Pole",    "logistics",     3, 1],
-    "bigPole":          ["Big Electric Pole",       "logistics",     3, 2],
+    "smallPole":        ["Small Electric Pole",     "logistics",     0, 3],
+    "mediumPole":       ["Medium Electric Pole",    "logistics",     1, 3],
+    "bigPole":          ["Big Electric Pole",       "logistics",     2, 3],
     "substation":       ["Substation",              "logistics",     3, 3],
 
-    "pipe":             ["Pipe",                    "logistics",     3, 4],
-    "undergroundPipe":  ["Underground Pipe",        "logistics",     3, 5],
+    "pipe":             ["Pipe",                    "logistics",     4, 3],
+    "undergroundPipe":  ["Underground Pipe",        "logistics",     5, 3],
 
-    "rail":             ["Rail",                    "logistics",     4, 0],
-    "trainStop":        ["Train Stop",              "logistics",     4, 1],
-    "railSignal":       ["Rail Signal",             "logistics",     4, 2],
-    "railChainSignal":  ["Rail Chain Signal",       "logistics",     4, 3],
+    "rail":             ["Rail",                    "logistics",     0, 4],
+    "trainStop":        ["Train Stop",              "logistics",     1, 4],
+    "railSignal":       ["Rail Signal",             "logistics",     2, 4],
+    "railChainSignal":  ["Rail Chain Signal",       "logistics",     3, 4],
     "cargoWagon":       ["Cargo Wagon",             "logistics",     4, 4],
-    "locomotive":       ["Locomotive",              "logistics",     4, 5],
+    "locomotive":       ["Locomotive",              "logistics",     5, 4],
 
 
-    "car":              ["Car",                     "logistics",     5, 0],
+    "car":              ["Car",                     "logistics",     0, 5],
 
-    "constructionBot":  ["Construction Robot",      "logistics",     6, 7],
-    "providerChest":    ["Passive Provider Chest",  "logistics",     6, 3],
-    "roboport":         ["Roboport",                "logistics",     6, 2],
+    "constructionBot":  ["Construction Robot",      "logistics",     7, 6],
+    "providerChest":    ["Passive Provider Chest",  "logistics",     3, 6],
+    "roboport":         ["Roboport",                "logistics",     7, 6],
 
     # Production Tab
     "repairPack":       ["Repair Pack",             "production",    0, 0],
 
-    "boiler":           ["Boiler",                  "production",    1, 0],
+    "boiler":           ["Boiler",                  "production",    0, 1],
     "steamEngine":      ["Steam Engine",            "production",    1, 1],
-    "solarPanel":       ["Solar Panel",             "production",    1, 2],
-    "accumulator":      ["Accumulator",             "production",    1, 3],
+    "solarPanel":       ["Solar Panel",             "production",    2, 1],
+    "accumulator":      ["Accumulator",             "production",    3, 1],
 
-    "burnerDrill":      ["Burner Mining Drill",     "production",    2, 0],
-    "electricDrill":    ["Electric Mining Drill",   "production",    2, 1],
+    "burnerDrill":      ["Burner Mining Drill",     "production",    0, 2],
+    "electricDrill":    ["Electric Mining Drill",   "production",    1, 2],
     "offshorePump":     ["Offshore Pump",           "production",    2, 2],
-    "pumpjack":         ["Pumpjack",                "production",    2, 3],
+    "pumpjack":         ["Pumpjack",                "production",    3, 2],
 
-    "stoneFurnace":     ["Stone Furnace",           "production",    3, 0],
-    "steelFurnace":     ["Steel Furnace",           "production",    3, 1],
-    "electricFurnace":  ["Electric Furnace",        "poduction",     3, 2],
+    "stoneFurnace":     ["Stone Furnace",           "production",    0, 3],
+    "steelFurnace":     ["Steel Furnace",           "production",    1, 3],
+    "electricFurnace":  ["Electric Furnace",        "poduction",     2, 3],
 
-    "assembler2":       ["Assembling Machine 2",    "production",    4, 1],
-    "chemicalPlant":    ["Chemical Plant",          "production",    4, 3],
+    "assembler2":       ["Assembling Machine 2",    "production",    1, 4],
+    "chemicalPlant":    ["Chemical Plant",          "production",    3, 4],
     "oilRefinery":      ["Oil Refinery",            "production",    4, 4],
-    "lab":              ["Lab",                     "production",    4, 6],
+    "lab":              ["Lab",                     "production",    6, 4],
 
 
     # Intermediates Tab
-    "coal":             ["Coal",                    "intermediates", 0, 1],
-    "stone":            ["Stone",                   "intermediates", 0, 2],
-    "ironOre":          ["Iron Ore",                "intermediates", 0, 3],
-    "copperOre":        ["Copper Ore",              "intermediates", 0, 4],
+    "coal":             ["Coal",                    "intermediates", 1, 0],
+    "stone":            ["Stone",                   "intermediates", 2, 0],
+    "ironOre":          ["Iron Ore",                "intermediates", 3, 0],
+    "copperOre":        ["Copper Ore",              "intermediates", 4, 0],
 
-    "ironPlate":        ["Iron Plate",              "intermediates", 1, 0],
-    "copperPlate":      ["Copper Plate",            "intermediates", 1, 1],
-    "steelPlate":       ["Steel Plate",             "intermediates", 1, 3],
-    "stoneBrick":       ["Stone Brick",             "intermediates", 0, 0],
-    "greenCircuit":     ["Green Circuit",           "intermediates", 0, 0],
+    "ironPlate":          ["Iron Plate",              "intermediates", 0, 1],
+    "copperPlate":        ["Copper Plate",            "intermediates", 1, 1],
+    "steelPlate":         ["Steel Plate",             "intermediates", 3, 1],
+    "stoneBrick":         ["Stone Brick",             "intermediates", 0, 0],
+    "greenCircuit":       ["Green Circuit",           "intermediates", 0, 0],
 
 
     # Combat Tab
-    "ammo":             ["Ammo",                    "combat",        1, 0],
-    "apAmmo":           ["Armor Piercing Ammo",     "combat",        1, 0],
+    "ammo":               ["Ammo",                    "combat",        0, 1],
+    "apAmmo":             ["Armor Piercing Ammo",     "combat",        0, 1],
 
-    "grenade":          ["Grenade",                 "combat",        1, 0],
+    "grenade":            ["Grenade",                 "combat",        0, 1],
 
-    "wall":             ["Wall",                    "combat",        7, 0],
-    "gunTurret":        ["Gun Turret",              "combat",        0, 2],
-    "laserTurret":      ["Laser Turret",            "combat",        0, 2],
-    "flamethrowerTurret": ["Flamethrower",            "combat",        0, 2],
-    "landMine":         ["Landmine",                "combat",        0, 6]
-
+    "wall":               ["Wall",                    "combat",        0, 7],
+    "gunTurret":          ["Gun Turret",              "combat",        2, 0],
+    "laserTurret":        ["Laser Turret",            "combat",        2, 0],
+    "flamethrowerTurret": ["Flamethrower",            "combat",        2, 0],
+    "landMine":           ["Landmine",                "combat",        0, 6]
 }

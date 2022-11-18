@@ -27,9 +27,9 @@ tabs = {  # tab locations starting at 4-1
 hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv')
 
 # Move to Resume button
-mouse.move(960, 330)        # Move to Resume button
-time.sleep(delay)           # DELAY
-mouse.click(button='left')
+# mouse.move(960, 330)        # Move to Resume button
+# time.sleep(delay)           # DELAY
+# mouse.click(button='left')
 time.sleep(delay)           # DELAY
 
 

@@ -4,8 +4,9 @@ import mouse
 import time
 import pandas as pd
 
-# Data
-from preset_1 import preset1 as preset
+# Preset Data
+from presets.preset_1 import preset1 as preset
+
 from items import items
 # from create_coordinates import create_coordinates
 
@@ -14,10 +15,8 @@ from items import items
 
 item_box = 40                     # Item boxes are 40x40 including spacing
 starting_position = [776,  1048]  # Starting position on my laptop screen
-filter_start_pos =  [804, 670]    # Filter starting pos
+filter_start_pos =  [804,  670]    # Filter starting pos
 delay = .005                       # timing delay
-
-# mouse.move(*filter_start_pos)
 
 tabs = {  # tab locations starting at 4-1
   "logistics":     [824,  600],
@@ -29,20 +28,16 @@ tabs = {  # tab locations starting at 4-1
 # Import Coordinates file
 hotbar_coordinates = pd.read_csv('hotbar_coordinates.csv')  # Imports as a Dataframe
 
-
-# """
+# Move to Resume button
 time.sleep(delay)           # --------------DELAY
 mouse.move(960, 330)        # move to Resume
 time.sleep(delay)           # --------------DELAY
 mouse.click(button='left')
 time.sleep(delay)           # --------------DELAY
-# """
 
 # ++++++++++++++++++++++++++++++ MAIN LOOP +++++++++++++++++++++++++++++++++++++++
 for key in hotbar_coordinates:
 
-  hbX =            hotbar_coordinates[key][0]                           # Hotbar X Coordinate
-  hbY =            hotbar_coordinates[key][1]                           # Hotbar Y Coordinate
   item =           preset[key]                                          # Item key name
   item_fancy =     items[item][0]                                       # Item Full Name
   tab =            items[item][1]                                       # Item tab name
@@ -52,7 +47,7 @@ for key in hotbar_coordinates:
   hotbar_offsetY = (int(key.split('-')[1]) - 1) * 40                    # Hotbar offset pixels Y
   item_locationX = itemX_offset + filter_start_pos[0] + hotbar_offsetX  # Item X screen position
   item_locationY = itemY_offset + filter_start_pos[1] - hotbar_offsetY  # Item Y screen position
-  tab_position = [tabs[tab][0], tabs[tab][1]]                           #
+  tab_position = [tabs[tab][0], tabs[tab][1]]                           # Only used in print_details
   tab_offsetX = tabs[tab][0] + hotbar_offsetX                           #
   tab_offsetY = tabs[tab][1] - hotbar_offsetY                           #
 
@@ -68,52 +63,24 @@ for key in hotbar_coordinates:
     print("Item Coordinates:", item_locationX, item_locationY)
   # print_details()
 
-  # Move mouse to position on hotbar--------------------------------------------- DONE
-  # time.sleep(delay)                            # --------------FIRST DELAY
-
-  mouse.move(hbX, hbY)                           # --------------ACTION
+  # Move mouse to position on hotbar
+  mouse.move(hotbar_coordinates[key][0], hotbar_coordinates[key][1])
   time.sleep(delay)                              # --------------DELAY
-  # print("moving to hotbar", hbX, hbY)
-  mouse.click(button='left')                     # --------------ACTION
+  mouse.click(button='left')
   time.sleep(delay)                              # --------------DELAY
 
-  """
-  keyboard.press('escape')    # --------------ACTION
-  time.sleep(delay*2)
-  keyboard.release('escape')  # --------------ACTION
-  time.sleep(delay*2)
-  """
-
-  # Move mouse to appropriate tab and click------------------------------------ NOT DONE
-  # Move mouse to tab coordinate, offset by hotbar_offsetX
-
+  # Move mouse to appropriate tab and click
   time.sleep(delay)                              # --------------DELAY
   mouse.move(tab_offsetX, tab_offsetY)
   time.sleep(delay)                              # --------------DELAY
   mouse.click(button='left')
   time.sleep(delay)                              # --------------DELAY
 
-  # logistics tab at 10-4 should be at like 1184, 486
-
-  # Move mouse to item and click----------------------------------------------- DONE
-  mouse.move(item_locationX, item_locationY)     # --------------ACTION
+  # Move mouse to item and click
+  mouse.move(item_locationX, item_locationY)
   time.sleep(delay)                              # --------------DELAY
-  mouse.click(button='left')                     # --------------ACTION
+  mouse.click(button='left')
   time.sleep(delay)                              # --------------DELAY
 
-  """
-  keyboard.press('escape')    # --------------ACTION
-  time.sleep(delay)
-  keyboard.release('escape')  # --------------ACTION
-  time.sleep(delay*3)
-  """
-
-  print('\n')
-  # if item == 'gunTurret':
-  #   break
-    # time.sleep(2)
-
-# ++++++++++++++++++++++++++++++ MAIN LOOP END +++++++++++++++++++++++++++++++++++++
 
 print("Done")
-time.sleep(1)

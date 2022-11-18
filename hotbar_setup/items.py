@@ -13,11 +13,9 @@ items = {
     "splitter":         ["Splitter",                  "logistics",     6, 1],
     "fastSplitter":     ["Fast Splitter",             "logistics",     7, 1],
 
-
     "inserter":         ["Inserter",                  "logistics",     1, 2],
     "longInserter":     ["Long-Handed Inserter",      "logistics",     2, 2],
     "fastInserter":     ["Fast Inserter",             "logistics",     3, 2],
-
 
     "smallPole":        ["Small Electric Pole",       "logistics",     0, 3],
     "mediumPole":       ["Medium Electric Pole",      "logistics",     1, 3],

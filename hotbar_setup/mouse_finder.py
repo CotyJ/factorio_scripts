@@ -6,22 +6,22 @@ from items import items
 
 def map_mouse():
   time.sleep(.5)
-
-  pos = mouse.get_position()
-  print(pos)
-  time.sleep(.5)
-
-  pos = mouse.get_position()
-  print(pos)
-  time.sleep(.5)
-
-  pos = mouse.get_position()
-  print(pos)
-  time.sleep(.5)
-
-  pos = mouse.get_position()
-  print(pos)
-  time.sleep(.5)
+  #
+  # pos = mouse.get_position()
+  # print(pos)
+  # time.sleep(.5)
+  #
+  # pos = mouse.get_position()
+  # print(pos)
+  # time.sleep(.5)
+  #
+  # pos = mouse.get_position()
+  # print(pos)
+  # time.sleep(.5)
+  #
+  # pos = mouse.get_position()
+  # print(pos)
+  # time.sleep(.5)
 
   pos = mouse.get_position()
   print(pos)

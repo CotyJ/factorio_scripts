@@ -14,4 +14,4 @@ Add an item by adding to the items Python file like so:
 
 "name" should match the name that will be entered in the preset key value.
 
-![Example](https://github.com/CotyJ/factorio_scripts/tree/main/factorio_script_preview.gif?raw=true)
+![Example](https://github.com/CotyJ/factorio_scripts/blob/main/hotbar_setup/factorio_script_preview.gif?raw=true)
